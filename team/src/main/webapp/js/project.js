@@ -5,8 +5,8 @@ function project(){};
 
 project.view = function(){
 	$frm = $('#frm_search')[0];
-		$frm.action = 'view';
-		$frm.submit();
+	$frm.action = 'view';
+	$frm.submit();
 }
 project.noticeList = function(){
 	$frm = $('#frm_search')[0];
@@ -31,6 +31,21 @@ project.join = function(){
 project.login = function(){
 	$frm = $('#frm_search')[0];
 	$frm.action = 'login';
+	$frm.submit();
+}
+project.search = function(){
+	$frm = $('#frm_search')[0];
+	$frm.action = 'searchList';
+	$frm.submit();
+}
+project.reserve = function(){
+	$frm = $('#frm_search')[0];
+	$frm.action = 'seat';
+	$frm.submit();
+}
+project.maps = function(){
+	$frm = $('#frm_search')[0];
+	$frm.action = 'maps';
 	$frm.submit();
 }
 $(function(){

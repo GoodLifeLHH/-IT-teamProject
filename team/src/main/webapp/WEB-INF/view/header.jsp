@@ -10,6 +10,7 @@
 		<div>마이페이지</div>
 		<div>예매 안내</div>
 		<div>Q&amp;A</div>
+		<div onclick='project.maps()'>오시는길</div>
 	</div>
 	<a href="/" id="logo"></a>
 	
@@ -18,7 +19,7 @@
 	<div id="search_bar">
 		<form name="frm_search" method="post" id="frm_search">
 			<input type="search" name="findStr" placeholder="검색어를 입력하세요.">
-			<img src="img/search-btn.gif" class="search_btn">
+			<img src="img/search-btn.gif" class="search_btn" onclick="project.search()">
 			<img src="img/close-btn.png" class="close_btn" id='close_searchBtn'>
 		</form>
 	</div>
