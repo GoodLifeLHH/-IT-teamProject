@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="maps_head">
-		<img src="img/maps.png" style="width:100%; height:200px;">
+		<img src="img/maps.png" style="width:100%; height:200px; margin-top:100px;">
 	</div>
 <div id="maps">
 	<div class="maps_header">
