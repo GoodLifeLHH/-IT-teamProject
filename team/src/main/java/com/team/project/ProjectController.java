@@ -62,4 +62,29 @@ public class ProjectController {
 		mv.setViewName("index.jsp?sub=./site/ticket");
 		return mv;
 	}
+	
+	@RequestMapping(value="/searchList", method = {RequestMethod.POST, RequestMethod.GET})
+	public ModelAndView searchList() {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("index.jsp?sub=./site/searchList");
+		return mv;
+	}
+	
+	@RequestMapping(value="/seat", method = {RequestMethod.POST, RequestMethod.GET})
+	public ModelAndView seat() {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("index.jsp?sub=./site/seat");
+		return mv;
+	}
+	
+	@RequestMapping(value="/maps", method = {RequestMethod.POST , RequestMethod.GET})
+	public ModelAndView maps() {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("index.jsp?sub=./site/maps");
+		return mv;
+	}
+
 }
