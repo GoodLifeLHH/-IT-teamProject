@@ -5,8 +5,9 @@
 #main {
 	margin: 0 auto;
 	width: 1400px;
-	height: 100%;
+	height: auto;
 	padding-top: 110px;
+	min-width: 700px;
 }
 
 #main > #poster_info {
@@ -64,13 +65,15 @@
 #main #mini_poster > img:first-child {
 	margin-left: 80px;
 }
-#main #big_poster > img {
-	margin: 20px 20px 0 40px;
-	float: left;
-	width: 400px;
-	margin-top: -280px;
+#main #big_poster {
+	width: 35%;
+	margin: -280px 20px 0 0;
+	float: right;
+	transition: all 1s;
 }
-
+#main #big_poster > img {
+	width: 100%;
+}
 #items {
 	width: 100%;
 	height: 300px;
@@ -109,7 +112,7 @@
 	color: #fff;
 }
 #main #items #item > .mdate {
-	width: 15%;
+	width: 90px;
 	font-size: 12pt;
 	float: right;
 }
@@ -170,13 +173,17 @@
 	border: 1px solid #41414c;
 }
 #view > .gray {
-	border: 30px solid #0004;
+	border: 30px solid #0002;
 	padding: 100px;
 	box-sizing: border-box;
 	text-align: center;
 }
 #view img {
-	width: 800px;
+	width: 80%;
+}
+#view p {
+	width: 80%;
+	margin: 0 auto;
 }
 #view a {
 	display: inline-block;
@@ -216,18 +223,19 @@
 	margin: 0 auto;
 	border: 1px solid #41414c;
 }
-#main > #login > #login_box > img {
-	padding: 100px 50% 30px;
+#main > #login > #login_box img {
+	display: block;
+	margin: 100px auto 30px;
 }
-#main > #login > #login_box > input[type="text"],
-#main > #login > #login_box > input[type="password"] {
+#main > #login > #login_box input[type="text"],
+#main > #login > #login_box input[type="password"] {
 	width: 200px;
 	height: 30px;
 	border: 1px solid #0003;
-	margin: 10px 0 0 35%;
+	margin-top: 10px;
 	float: left;
 }
-#main > #login > #login_box > input[type="button"] {
+#main > #login > #login_box input[type="submit"] {
 	width: 100px;
 	height: 80px;
 	background-color: #ed1839;
@@ -237,10 +245,10 @@
 	float: left;
 	margin: -34px 0 0 10px;
 }
-#main > #login > #login_box > a {
+#main > #login > #login_box a {
 	display: block;
 	text-decoration: none;
-	margin: 48px 0 0 58%;
+	margin: 48px 0 0 75%;
 	color: #000;
 	font-size: 10pt;
 }
@@ -265,7 +273,7 @@
 	background-color: #fff;
 }
 #notice > .gray {
-	border: 30px solid #0004;
+	border: 30px solid #0002;
 	padding: 100px;
 	box-sizing: border-box;
 	text-align: center;
@@ -298,7 +306,7 @@
 }
 #notice .list_box > .list {
 	display: inline-block;
-	width: 700px;
+	width: 70%;
 	color: #000;
 	text-decoration: none;
 	text-align: left;
@@ -331,7 +339,7 @@
 	background-color: #fff;
 }
 #ticket > .gray {
-	border: 30px solid #0004;
+	border: 30px solid #0002;
 	padding: 100px;
 	box-sizing: border-box;
 	text-align: center;
@@ -363,7 +371,7 @@
 }
 #ticket .list_box > .list {
 	display: inline-block;
-	width: 700px;
+	width: 60%;
 	color: #000;
 	text-decoration: none;
 	text-align: left;
@@ -387,6 +395,7 @@
 	margin-top: 50px;
 }
 
+
 /* noticeList **************************************************************/
 #notice .notice_title {
 	font-size: 20pt;
@@ -403,6 +412,284 @@
 #notice .notice_content {
 	margin: 100px auto;
 	width: 80%;
+	height: auto;
+	text-align: left;
+}
+/* join **************************************************************/
+#main > #join_header {
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to left, rgba(0,0,0,0.5), 40%, rgb(0,0,0,0.5)),
+				url(../img/pen.jpg) no-repeat center / cover;
+}
+#main > #join_header > p {
+	font-size: 22pt;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 200px;
+}
+#main > #join {
+	width: 100%;
 	height: 600px;
-	border: 1px solid #000;
+	background-color: #fff;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+#main > #join > #join_box {
+	width: 80%;
+	height: 500px;
+	margin: 0 auto;
+	border: 1px solid #41414c;
+}
+#main > #join > #join_box img {
+	display: block;
+	margin: 100px auto 30px;
+}
+.box {
+	margin: 0 auto;
+	width:350px;
+}
+#main > #join > #join_box label {
+	width: 100px;
+	display: inline-block;
+}
+#main > #join > #join_box output {
+	display: none;
+}
+#main > #join > #join_box input[type="text"],
+#main > #join > #join_box input[type="password"] {
+	width: 150px;
+	height: 24px;
+	border: 1px solid #0003;
+	margin-bottom: 10px;
+}
+#main > #join > #join_box input[type="button"] {
+	border: 1px solid #ed1839;
+	border-radius: 3px;
+	background-color: #fff;
+}
+#main > #join > #join_box input[type="submit"] {
+	width: 100px;
+	height: 30px;
+	background-color: #ed1839;
+	color: #fff;
+	border: 0px solid;
+	font-size: 12pt;
+	float: left;
+	margin: 10px 40%;
+}
+
+/* searchList **************************************************************/
+#main > .search_space {
+	width: 100%;
+	height: 100px;
+	background-color: #eee;
+	position: relative;
+}
+#main > .search_space > input[type="search"] {
+	width: 40%;
+	height: 50px;
+	color: #eee;
+	border: 0px solid;
+	border-radius: 25px;
+	padding-left: 30px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12pt;
+	outline:none;
+}
+#main > .search_space > input[type="button"] {
+	width: 100px;
+	height: 50px;
+	color: #fff;
+	background-color: #6b7bdb;
+	border: 0px solid;
+	border-radius: 25px;
+	position: absolute;
+	top: 50%;
+	right: 22%;
+	transform: translate(-50%, -50%);
+	font-size: 12pt;
+}
+#main > .result_space {
+	width: 100%;
+	background-color: #fff;
+}
+#main > .result_space > p {
+	text-align: center;
+	margin: 0;
+	padding: 40px 20px 20px;
+	box-sizing: border-box;
+	font-size: 20pt;
+	font-weight: bold;
+	position: relative;
+}
+#main > .result_space > p::after {
+	content: "";
+	border-bottom: 2px solid #222;
+	width: 70%;
+	min-width: 600px;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: absolute;
+}
+#main > .result_space > p > span {
+	color: #6b7bdb;
+}
+#main > .result_space > .search_page {
+	width: 80%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#main > .result_space > .search_page > .search_title {
+	width: 100%;
+	position: relative;
+	font-size: 18pt;
+	padding: 5px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	display: inline-block;
+}
+#main > .result_space > .search_page > .search_title::before {
+	content: "";
+	width: 35px;
+	height: 8px;
+	background-color: #6b7bdb;
+	position: absolute;
+	top: -5px;
+	left: 0;
+}
+#main > .result_space > .search_page span {
+	font-size: 14pt;
+	padding-left: 5px;
+}
+#main > .result_space > .search_page > table input[type="button"] {
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	border: 0px solid;
+	background-color: #6b7bdb;
+	font-size: 12pt;
+}
+#main > .result_space > .search_page > table,
+#main > .result_space > .search_page > table th,
+#main > .result_space > .search_page > table td {
+	border: 1px solid #0002;
+	border-collapse: collapse;
+	padding: 10px;
+	color: #333;
+	height: 35px;
+}
+#main > .result_space > .search_page > table th {
+	background-color: #eee5;
+}
+#main > .result_space > .search_page > table span {
+	font-size: 10pt;
+	color: #fff;
+	background-color: #ed1839;
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+}
+#main > .result_space > .search_page > table th:first-child { width: 50%; }
+#main > .result_space > .search_page > table th:nth-child(2) { width: 30%; }
+#main > .result_space > .search_page > table th:nth-child(3) { width: 30%; }
+#main > .result_space > .search_page > table th:nth-child(4) { width: 30%; }
+
+#main > .result_space > .search_page > .board {
+	margin: 10px;
+}
+#main > .result_space > .search_page > .board > .board_title {
+	font-size: 14pt;
+	font-weight: bold;
+}
+#main > .result_space > .search_page > .board > .board_date {
+	position: relative;
+	color: #888;
+	font-size: 11pt;
+	margin-left: 15px;
+}
+#main > .result_space > .search_page > .board > .board_date::before,
+#main > .result_space > .search_page > .board > .board_date::after {
+	position: absolute;
+	content: "";
+	color: #ddd;
+	height: 15px;
+	border-left: 1px solid #888;
+}
+#main > .result_space > .search_page > .board > .board_date::before { margin: 10px -10px; }
+#main > .result_space > .search_page > .board > .board_date::after { margin: 10px; }
+#main > .result_space > .search_page > .board > .board_content { font-size: 11pt; color: #555; }
+
+/* 반응형 **************************************************************/
+@media screen and (max-width:1400px) {
+	#main {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:1300px) {
+	#main #items #item > .subject {
+	width: 70%;
+	}
+}
+@media screen and (max-width:1356px) {
+	#main #big_poster {
+
+		width: 200px;
+	}
+}
+@media screen and (max-width:1122px) {
+	#main #big_poster {
+		transition: all 0s;
+		margin-top: -425px;
+	}
+}
+@media screen and (max-width:900px) {
+	#main #mini_poster > img:last-child {
+		display: none;
+	}
+}
+@media screen and (max-width:850px) {
+	#main #items #item > .subject {
+	width: 55%;
+	}
+	#ticket .list_box > .list,
+	#notice .list_box > .list {
+	width: 55%;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	}
+	#main > #view_info > img {
+		display: none;
+	}
+	#main > #view_info > input[type="button"] {
+		transition: all 1s;
+		width: 200px;
+		height: 50px;
+		background-color: #ed1839;
+		color: #fff;
+		border: 0px solid;
+		position: absolute;
+		top: 70%;
+		left: 70%;
+		font-size: 12pt;
+	}
+}
+@media screen and (max-width:750px) {
+	#main #mini_poster > img:nth-child(5) {
+		display: none;
+	}
+}
+@media screen and (max-width:650px) {
+	#main #items #item > .subject {
+	width: 40%;
+	}
 }
