@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +46,19 @@
 					<% } %>
 				</table>
 				
-				
+				<div id="page">
+
+					<input type="button" value="처음" id="btnFirst" onclick=""/>
+					<input type="button" value="이전" id="btnPrev" onclick=""/>
+	
+					<c:forEach var="i" begin="1" end="5">
+						<input type="button" value="${i }" onclick="brd.page(${i})"
+						class="${(i==page.nowPage)? 'here' : '' }"/>
+					</c:forEach>
+					<input type="button" value="다음" id="btnNext" onclick=""/>
+					<input type="button" value="끝" id="btnLast" onclick=""/>
+	
+				</div>
 			</div>
 		</div>
 	</div>
