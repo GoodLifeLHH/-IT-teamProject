@@ -635,7 +635,7 @@
 	font-size: 12pt;
 	font-weight: bold;
 	background-color: #fff;
-	border: 1px solid #000;
+	border: 0px solid;
 	padding: 5px;
 	color: #888;
 }
